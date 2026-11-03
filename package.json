@@ -1,0 +1,10 @@
+{
+  "name": "rogue-talent-builder",
+  "private": true,
+  "type": "module",
+  "description": "WoW Forever Rogue talent calculator (static site, no build step)",
+  "scripts": {
+    "test": "node --test",
+    "start": "python3 -m http.server 8000"
+  }
+}

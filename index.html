@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WoW Forever - Rogue Talent Builder (Nov 2 Patch)</title>
+<meta name="description" content="WoW Forever Rogue talent calculator, updated for the November 2 beta patch.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗡️</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>WoW: Forever — Rogue Talent Calculator</h1>
+  <div class="subtitle" id="subtitle"></div>
+  <div class="stats-bar">
+    <div class="mode-toggle" role="group" aria-label="Talent data version">
+      <button id="mode-nov2">Nov 2 Patch</button>
+      <button id="mode-pre">Pre-patch</button>
+    </div>
+    <div>Points Remaining: <span id="pts-left" class="points-left">51</span> / 51</div>
+    <div id="tree-summary" class="muted">0 / 0 / 0</div>
+    <div class="muted">Required level: <span id="req-level">—</span></div>
+    <label class="chk" id="show-changes-wrap"><input type="checkbox" id="show-changes" checked> Highlight patch changes</label>
+    <button class="link-btn" id="copy-link">Copy build link</button>
+    <button class="reset-btn" id="reset">Reset All Trees</button>
+  </div>
+</header>
+
+<div id="data-error"></div>
+<div class="trees-container" id="trees"></div>
+<div class="legend" id="legend">
+  <span><span class="dot" style="background:var(--tag-new)"></span>New talent</span>
+  <span><span class="dot" style="background:var(--tag-changed)"></span>Changed</span>
+  <span><span class="dot" style="background:var(--tag-moved)"></span>Moved only</span>
+  <span>Click: add · Right-click (long-press): remove · Shift: all ranks</span>
+</div>
+
+<details class="patch-panel" open>
+  <summary>November 2 patch — Rogue changes</summary>
+  <div id="patch-body"></div>
+</details>
+
+<footer>
+  Pre-patch data: WoW Forever beta client data via
+  <a href="https://foreverchanges.pro/talents/rogue" target="_blank" rel="noopener">foreverchanges.pro</a>
+  (build 1.60.1.70753). Icons: Wowhead. Talent changes per the Nov 2 patch notes; hover a talent for details.
+</footer>
+
+<div id="tooltip"></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

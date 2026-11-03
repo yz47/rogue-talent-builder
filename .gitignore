@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+.playwright-mcp/
+# Original prototype, kept locally for reference; superseded by index.html + js/
+base.html
